@@ -27,6 +27,50 @@ body {
     border-radius: 15px;
     background:rgb(190, 153, 230);
 }
+/* ============= Splash screen ======================== */
+.intro{
+    position: fixed;
+    z-index: 20;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(73, 202, 198);
+    transition: 1s;
+}
+.logo-header{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: rgb(140, 70, 170);
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+.logo{
+    position: relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+}
+.logo.active{
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+.logo.fade{
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
+.logoimg {
+    width: 100px;
+    height: 100px;
+    /* background: #3b298a; */
+    position: fixed;
+    left: -115px;
+    top: -35px;
+}
 /* --------------------------------------Aside--------------------------- */
 
 .logopic img{
@@ -225,26 +269,21 @@ input[type=range] {
 }
 .container {
     margin-top: 10px;
-    
 }
-
 h3.hello {
     font-size: 20px;
     font-family: 'Alegreya SC', serif;
-    color: rgb(109, 0, 128);
-    
+    color: rgb(109, 0, 128);    
 }
-
 h3.hello span {
     font-family: 'Clicker script', cursive;
     font-size: 40px;
     font-weight: 700;
     color: rgb(18, 141, 143);
 }
-
 .typing {
     color: rgb(143, 58, 182);
-    }
+}
 .main {
     display: flex;
     flex-direction: column;
@@ -252,10 +291,10 @@ h3.hello span {
     box-sizing: border-box;
 }
 #input_image{
-    margin-bottom: 15px;
+    margin:20px 0 20px -60px;
 }
 #result {
-    margin: 15px;
+    margin:20px 0 0 -60px;
 }
 
 /* ---------Upload button--------- */
@@ -311,7 +350,7 @@ input[type="file"]
     background-position: 0%;
 }
 /* ------------------------Responsive----------------------- */
-@media(max-width:1100px) {
+@media(max-width:900px) {
     /* buttons */
     .aside .nav{
         flex-direction: column;
@@ -323,14 +362,6 @@ input[type="file"]
     .button1 {
         padding: 8px;
         font-size: 12px;
-    }
-    /* logo */
-    .aside .logo a {
-        font-size: 20px;
-        letter-spacing: 4px;
-    }
-    .aside .logo a span {
-        font-size: 28px;
     }
     /*----------- for toggle ----------   */
     .aside {
@@ -355,52 +386,16 @@ input[type="file"]
     .section.open {
         left: 270px;
     }
-#input_image{
-    max-width: 90%;
-}
+    #input_image{
+        max-width: 80%;
+    }
     #result {
         max-width: 90%;
     }
 }
-
-
-/* ============= Splash screen ======================== */
-.intro{
-    position: fixed;
-    z-index: 20;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(73, 202, 198);
-    transition: 1s;
-}
-.logo-header{
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    color: white;
-}
-.logo{
-    position: relative;
-    display: inline-block;
-    bottom: -20px;
-    opacity: 0;
-}
-.logo.active{
-    bottom: 0;
-    opacity: 1;
-    transition: ease-in-out 0.5s;
-}
-.logo.fade{
-    bottom: 150px;
-    opacity: 0;
-    transition: ease-in-out 0.5s;
-}
 /* ===================image transformation buttons======================= */
 
-.s{
+.circle_icons{
     position: fixed;
     right: -110px;
     height: 100vh;
@@ -412,7 +407,8 @@ input[type="file"]
     width: 178px;
     color: transparent;
     background: transparent;
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: bold;
     display: block;
     margin: 2px;
     transition: 1s;
@@ -422,7 +418,7 @@ input[type="file"]
     text-align: left;
     font-family: 'Alegreya SC', serif;
 }
-.s .a:hover{
+.circle_icons .a:hover{
     transform: translate(-60px,0);
     transition: all 1s;
     color: #3b298a;
@@ -430,11 +426,11 @@ input[type="file"]
     backdrop-filter: blur(5px);
     border-radius:30px ;
 }
-.s i{
+.circle_icons i{
     margin-right: 10px;
     font-size: 20px;
     background: rgb(211, 182, 246) ;
-    padding: 8px 0;
+    padding: 9px 0;
     border-radius: 30px 30px 30px 30px;
     transform: rotate(0deg);
     color: black;  
@@ -443,7 +439,7 @@ input[type="file"]
     text-align: center;
     color: rgba(78, 28, 101);    
 }
-.s .a:hover i {
+.circle_icons .a:hover i {
     transform: rotate(360deg);
     transition: all 1s;    
 } 

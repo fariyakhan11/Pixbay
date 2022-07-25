@@ -6,14 +6,12 @@ import numpy as np
 from colorizer import Colorizer
 import cv2
 
-
-
 # IMAGE TRANSFIGURATION
 
 #-------------blur----------
 def blur_image(image):
     im = Image.open(image)
-    im = im.filter(ImageFilter.GaussianBlur(radius=3))
+    im = im.filter(ImageFilter.GaussianBlur(radius=6))
     file_object = io.BytesIO()
     im.save(file_object, "PNG")
     file_object.seek(0)
