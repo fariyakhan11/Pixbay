@@ -19,7 +19,8 @@
 
 	}
 	// <!-- jo image select krtay uska url ajayega  -->
-	function readURL(input) {
+	function readURL(input) 
+	{
 		if (input.files && input.files[0]) {
 			var reader = new FileReader();
 			reader.onload = function (e) {
@@ -34,7 +35,8 @@
 		}
 	}
 
-	function download() {
+	function download() 
+	{
 		const link = document.createElement("a");
 		link.href = document.getElementById('result').src;
 		link.download = 'download.png';
@@ -80,22 +82,18 @@
 
 <body>
 	<!-- splash screen -->
-	<!-- <div class="intro">
+	<div class="intro">
 		<h1 class="logo-header">
 			<span class="logo">Pix</span><span class="logo">Bay.</span>
 		</h1>
-	</div> -->
-	<!-- splash screen end -->
-
-
-	<!------------------------ Main container starts----------------------------->
+	</div>
+	
 	<div class="main-container">
-		<!-- side bar -->
+		<!----------- Aside ------------------>
 		<div class="aside">
 			<div class="nav-toggler">
 				<span></span>
 			</div>
-
 			<ul class="nav">
 				<div class="logopic">
 					<img src="/static/images/pixbay logo.png">
@@ -105,7 +103,6 @@
 					<a href="/about"><i class="homei fa fa-circle-info"></i> ABOUT </a>
 				</div>
 				<br>
-
 				<h4>Image Transfiguration</h4>
 				<li>
 					<button class="button1" onclick="send_request('/blur');">Blur</button>
@@ -150,8 +147,7 @@
 				</li>
 			</ul>
 		</div>
-		<!-- main content start -->
-
+		<!------------------------ Main container starts-------------------------->
 		<div class="main-content">
 			<div class="home section">
 				<div class="container">
@@ -159,7 +155,6 @@
 					<h3 class="type">This website help users to apply different transformation to images like <span
 							class="typing">Deblur</span></h3>
 				</div>
-
 				<!-- file buttons -->
 				<div class="download">
 					<label class="labels">UPLOAD FILE: </label>
@@ -176,10 +171,8 @@
 			</div>
 			<div class="s">
 				<button class="a" onclick="send_request('/mirror');"><i class="fa fa-clone"></i> Mirror</button>
-				<button class="a" onclick="send_request('/rescale');"><i class="fa-solid fa-minimize"></i>
-					Scale</button>
-				<button class="a" onclick="send_request('/transpose');"><i
-						class="fa-solid fa-retweet"></i>Transpose</button>
+				<button class="a" onclick="send_request('/rescale');"><i class="fa-solid fa-minimize"></i>Scale</button>
+				<button class="a" onclick="send_request('/transpose');"><i class="fa-solid fa-retweet"></i>Transpose</button>
 				<button class="a" onclick="send_request('/rot');"><i class="fa-solid fa-rotate-left"></i>Rotate</button>
 				<button class="a" onclick="send_request('/shearX');"><i class="fa-solid fa-map"></i>Shear X</button>
 				<button class="a" onclick="send_request('/shearY');"><i class="fa-solid fa-map"></i> Shear Y</button>
@@ -187,7 +180,6 @@
 		</div>
 	</div>
 	</div>
-
 </body>
 <script>
 	document.getElementById("contrast_value").innerHTML = 0
@@ -238,8 +230,8 @@
 			}
 		});
 	}
-
 </script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
 <script src="/static/script.js"></script>
 

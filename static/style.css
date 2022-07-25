@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+SC&family=Audiowide&family=Telex&display=swap');
 
-
 body {
     background: url(/static/images/background.png);
     background-attachment: fixed;
@@ -19,24 +18,20 @@ body {
 ::after {
     box-sizing: border-box;
 }
-
 ::-webkit-scrollbar {
     width: 14px;
     border-radius: 15px;
     background: rgba(50, 124, 132, 0.628);
-  }
-  
+}  
   ::-webkit-scrollbar-thumb {
     border-radius: 15px;
-      background:rgb(190, 153, 230);
-  }
-
-/* --------------------------------------side--=----------------------------- */
+    background:rgb(190, 153, 230);
+}
+/* --------------------------------------Aside--------------------------- */
 
 .logopic img{
     width: 70px;
-    height: 70px;
-   
+    height: 70px;   
 }
 .logopic{
     display: flex;
@@ -54,18 +49,15 @@ body {
     font-weight: bold;
     text-decoration: none;
 }
-.links a:hover{    
-    
+.links a:hover{     
     color:black;
 }
 .nav h5{
     text-align: center;
 }
-
 ul {
     list-style: none;
 }
-
 .aside {
     width: 270px;
     min-height: 95vh;
@@ -88,7 +80,6 @@ ul {
     display: block;
     margin-bottom: 8px;
 }
-
 /* nav toggler */
 .aside .nav-toggler {
     height: 28px;
@@ -106,7 +97,6 @@ ul {
     z-index: 6;
     transition: all o.3s ease;
 }
-
 .aside .nav-toggler span {
     height: 2px;
     width: 15px;
@@ -115,12 +105,10 @@ ul {
     position: relative;
     z-index: 1;
 }
-
 .aside .nav-toggler.open span
 {
    background-color:transparent
 }
-
 .aside .nav-toggler span:before {
     content: '';
     height: 2px;
@@ -150,7 +138,6 @@ ul {
    top: 0;
    font: red;
 }
-
 /* --------------------------------buttons------------------------------ */
 .button1 {
     width: 90px;
@@ -167,7 +154,6 @@ ul {
     font-family: 'Alegreya SC', serif;
     font-size: 16px;
 }
-
 .button1:not([disabled]):focus {
     box-shadow: 0 0 .25rem rgba(142, 140, 140, 0.5), -.125rem -.125rem 1rem rgba(141, 71, 239, 0.5), .125rem .125rem 1rem rgba(115, 90, 255, 0.5);
 }
@@ -189,23 +175,19 @@ ul {
     font-weight: bold;
     font-size: 18px;
 }
-
 input[type=range] {
     margin-top: 10px;
     width: 100%;
     /* height: 18px; */
     -webkit-appearance: none;
     background-color: transparent;   
-  }
-
+}
   input[type=range]::-webkit-slider-runnable-track {
-    
     height: 4px;
     cursor: pointer;
     background: #9253d4;
     border-radius: 6px;   
-  }
-
+}
   input[type=range]::-webkit-slider-thumb {
     height: 16px;
     width: 12px;
@@ -215,17 +197,14 @@ input[type=range] {
     cursor: pointer;
     -webkit-appearance: none;
     margin-top: -5px;
-  }
+}
   input[type=range]:focus::-webkit-slider-runnable-track {
     background: #000000;
-  }
-  
+}  
 /* -------------------------------------Section------------------------------ */
-
 .main-content {
     padding-left: 270px;
 }
-
 .section {
     background-color: rgba(255, 255, 255, 0.201);
     box-shadow: 3px 4px 15px rgba(203, 154, 201, 1);
@@ -244,7 +223,6 @@ input[type=range] {
     opacity: 1;
     transition: all 0.3s ease;
 }
-
 .container {
     margin-top: 10px;
     
@@ -286,10 +264,8 @@ h3.hello span {
     visibility: hidden;
     margin-left: -85px;
     border-radius: 5px;
-    border: none;
-    
+    border: none;   
 }
-
 input[type="file"] 
 {
     padding: 7px;
@@ -303,7 +279,6 @@ input[type="file"]
 .download{
     margin-top: 15px;
 }
-
 .buttond {
     padding: 10px;
     border-radius: 10px;
@@ -325,20 +300,17 @@ input[type="file"]
     background-color: #b0f1e72f;
     transition: none;
 }
-
 .buttond:hover {
     box-shadow: 0 0 .25rem rgba(142, 140, 140, 0.5), -.125rem -.125rem 1rem rgba(141, 71, 239, 0.5), .125rem .125rem 1rem rgba(115, 90, 255, 0.5);    
     background-position: right center;
     color:#594594;
 }
-
 .disable:hover{
     box-shadow: none;
     color: rgb(102, 94, 94);
     background-position: 0%;
 }
-
-/* ------------------------Responsive---------- */
+/* ------------------------Responsive----------------------- */
 @media(max-width:1100px) {
     /* buttons */
     .aside .nav{
@@ -348,7 +320,6 @@ input[type="file"]
     .aside .nav li {
         margin-bottom: 5px;
     }
-
     .button1 {
         padding: 8px;
         font-size: 12px;
@@ -374,16 +345,13 @@ input[type="file"]
         left: 30px;
         top: 30px;
     }
-
     .aside .nav-toggler.open {
         left: 280px;
         top: 5px;
     }
-
     .section {
         left: 0;
     }
-
     .section.open {
         left: 270px;
     }
@@ -430,7 +398,6 @@ input[type="file"]
     opacity: 0;
     transition: ease-in-out 0.5s;
 }
-
 /* ===================image transformation buttons======================= */
 
 .s{
@@ -439,8 +406,7 @@ input[type="file"]
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    
+    justify-content: center;    
 }
 .a{
     width: 178px;
@@ -475,11 +441,9 @@ input[type="file"]
     width: 38px; 
     height: 38px;
     text-align: center;
-    color: rgba(78, 28, 101);
-    
+    color: rgba(78, 28, 101);    
 }
 .s .a:hover i {
     transform: rotate(360deg);
-    transition: all 1s;
-    
+    transition: all 1s;    
 } 
