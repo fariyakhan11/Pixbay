@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC&family=Audiowide&family=Telex&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@1,6..72,300&display=swap');
+
+/* /Global styles/ */
+
+:root {
+  --main-font: 'Alegreya SC', serif;
+  --secondary-font: 'Clicker script',cursive;
+  --main-font-color-dark: black;
+  --secondary-font-color: rgb(109, 0, 128);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  background: url(/static/images/background.png);
+  background-attachment: fixed;
+  background-size: cover;
+}
+::-webkit-scrollbar {
+  width: 14px;
+  border-radius: 15px;
+  background: rgba(50, 124, 132, 0.628);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+    background:rgb(190, 153, 230);
+}
+
+.navbar{
+    background-color: rgba(128, 106, 189, 0.356);
+    backdrop-filter: blur(20px);    
+    width: 100%;
+    z-index: 5;
+    position: fixed;
+    top: 0;
+}
+.logo{
+  width: 65px;
+  height: 65px;
+}
+.logo-heading{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.webname{    
+  font-size: 3.5rem;
+  font-family: 'Clicker script';
+  color:rgb(18, 141, 143);
+  letter-spacing: 2px;
+  margin-left: 20px;
+}
+.main{
+  margin-top: 90px;
+}
+
+.heading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-family: var(--main-font);
+  color: var(--secondary-font-color);
+  font-weight: 100;  
+}
+
+
+.fletter {
+  text-transform: uppercase;
+  font-size: 4rem;
+}
+
+/*---------------------Card------------------*/
+.Tcontainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  z-index: 1;
+}
+
+.Tcontainer .Tcard {
+  position: relative;
+  width: 700px;
+  height: 250px;
+  margin-top: 10px;
+  padding: 60px;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.201);
+  box-shadow: 3px 4px 22px rgba(128, 106, 189, 0.356);
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.Tcontainer .Tcard .Tcontent {
+  transition: 0.5s;
+}
+
+.Tcontainer .Tcard:hover .Tcontent {
+  transform: translateY(-20px);
+  transform: scale(1.1);
+}
+
+.Tcontainer .Tcard h3 {
+  font-size: 2em;
+  color: rgb(56, 149, 154);
+  font-family: var(--secondary-font);
+  z-index: 1;
+}
+
+.Tcontainer .Tcard p {
+  font-size: 1em;
+  font-family: var(--body-font);
+  color: black;
+  /* text-align: center; */
+  justify-content: center;
+}
+
+.Tcontainer .Tcard .Tcontent a {
+  position: relative;
+  display: inline-block;
+  padding: 8px 20px;
+  margin-top: 15px;
+  background: #fff;
+  color: #000;
+  font-family: var(--main-font);
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/*------------------------------our team--------------------------*/
+
+.container1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.container1 .card {
+  position: relative;
+  width: 200px;
+  height: 270px;
+  background-color: rgba(255, 255, 255, 0.201);
+  box-shadow: 3px 4px 22px rgba(128, 106, 189, 0.356);
+  margin: 20px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+}
+
+.container1 .card .contentt {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* opacity: 0.6; */
+  transition: 0.5s;
+}
+
+.container1 .card:hover .contentt {
+  opacity: 1;
+  transform: translateY(-20px);
+}
+
+.container1 .card .contentt .imgbox {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 10px solid rgba(0, 0, 0, 0.25);
+}
+
+.container1 .card .contentt .imgbox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container1 .card .contentt .contentbox h3 {
+  color: var(--main-font-color-dark);
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  margin: 20px 0 10px;
+  line-height: 1.1em;
+}
+
+.container1 .card .contentt .contentbox h3 span {
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.container1 .card .scilink {
+  position: absolute;
+  bottom: 25px;
+  left: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container1 .card .scilink li {
+  list-style: none;
+  transform: translateY(40px);
+  transition: 0.5s;
+  transition-delay: calc(0.1s* var(--i));
+  opacity: 0;
+  margin: 10px;
+}
+
+.container1 .card:hover .scilink li {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.container1 .card .scilink li a {
+  color: black;
+  font-family: var(--main-font);
+  font-size: 25px;
+}
+
+.container1 .card .scilink li a:hover {
+  color: var(--secondary-font-color)
+}
+/* -------------responsive-------------------- */
+@media screen and (max-width: 900px) {
+  .mainsec {
+    margin-top: 20%;
+  }
+
+  .heading {
+    Font-size: 2.5rem;
+  }
+
+  .fletter {
+    font-size: 4rem;
+  }
+
+  /*---responsive for Card*/
+
+  .Tcontainer .Tcard {
+    width: 450px;
+    height: 300px;
+    }
+
+   .Tcontainer .Tcard .Tcontent h3 {
+    font-size: 1.5em;
+  }
+
+  .inventory-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* footer responsive */
+  footer {
+    padding: 40px;
+  }
+
+  footer .containers {
+    flex-direction: column;
+  }
+
+  footer .containers .sec {
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+
+  footer .containers .sec.aboutus,
+  .quicklinks,
+  .contact {
+    width: 100%;
+  }
+  .copyrightText {
+    padding: 8px 40px;
+  }
+}
+
+/* -----------------foooetr------------- */
+.sci {
+  margin-top: 20px;
+  display: flex;
+}
+
+.sci li {
+  list-style: none;
+}
+
+footer .containers {
+  background: rgba(225, 225, 225, 0.123);
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  width: 100%;
+  padding: 15px 40px;
+}
+
+footer .containers .sec {
+  margin-right: 30px;
+}
+
+footer .containers .sec.aboutus {
+  width: 40%;
+}
+
+footer .containers h2 {
+  font-size: 1.5rem;
+  font-family: var(--main-font);;
+  color: var(--secondary-font-color);
+  font-weight: 500;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+footer .containers h2:before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: #30acce;
+}
+
+footer p {
+  color: black;
+  font-family: var(--main-font);
+}
+
+.sci li a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  color: #000;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.sci li a:hover {
+  color: var(--secondary-font-color);
+}
+
+.sci li .fa {
+  color: black;
+  font-size: 25px;
+}
+
+.quicklinks a:hover {
+  color: black;
+}
+
+.copyrightText {
+  width: 100%;
+  padding: 8px 100px;
+  text-align: center;
+  color: black;
+  background: rgba(255, 255, 255, 0.24);
+  box-shadow: 0 8px 32px 0 rgba(19, 19, 20, 0.37);
+  backdrop-filter: blur(1px);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.18);
+  font-family: var(--main-font);
+}
