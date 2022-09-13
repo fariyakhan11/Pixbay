@@ -11,8 +11,8 @@ Python 3.0 or above version
 
 ###### libraries
 ```
-pip install flask
-pip install Pillow
+- pip install flask
+- pip install Pillow
 pip install torchvision
 pip install -U scikit-image
 pip install fastai
