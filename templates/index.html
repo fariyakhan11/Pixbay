@@ -193,80 +193,81 @@
 
 </body>
 <script>
-	document.getElementById("contrast_value").innerHTML =0
-	document.getElementById("sharpen_value").innerHTML =0
-	document.getElementById("saturate_value").innerHTML =0
-	document.getElementById("bright_value").innerHTML =0
-	
-	document.getElementById("contrast").oninput= function() {
-	  document.getElementById("contrast_value").innerHTML =$(this).val()-10;
-		document.getElementById("sharpen_value").innerHTML =0;
-	document.getElementById("bright_value").innerHTML =0;
-	document.getElementById("saturate_value").innerHTML =0;
-	document.getElementById("Sharpen").value=10;
-	document.getElementById("bright").value=10;
-	document.getElementById("saturate").value=10;
-	send_slide('/contrast',$(this).val())}
-	
-	document.getElementById("Sharpen").oninput= function() {
-	  document.getElementById("sharpen_value").innerHTML =$(this).val()-10;
-	document.getElementById("contrast_value").innerHTML =0;
-	document.getElementById("bright_value").innerHTML =0;
-	document.getElementById("saturate_value").innerHTML =0;
-	document.getElementById("contrast").value=10;
-	document.getElementById("bright").value=10;
-	document.getElementById("saturate").value=10;
-	send_slide('/sharpen',$(this).val())
+	document.getElementById("contrast_value").innerHTML = 0
+	document.getElementById("sharpen_value").innerHTML = 0
+	document.getElementById("saturate_value").innerHTML = 0
+	document.getElementById("bright_value").innerHTML = 0
+
+	document.getElementById("contrast").oninput = function () {
+		document.getElementById("contrast_value").innerHTML = $(this).val() - 10;
+		document.getElementById("sharpen_value").innerHTML = 0;
+		document.getElementById("bright_value").innerHTML = 0;
+		document.getElementById("saturate_value").innerHTML = 0;
+		document.getElementById("Sharpen").value = 10;
+		document.getElementById("bright").value = 10;
+		document.getElementById("saturate").value = 10;
+		send_slide('/contrast', $(this).val())
 	}
-	
-	document.getElementById("bright").oninput= function() {
-	  document.getElementById("bright_value").innerHTML =$(this).val()-10;
-	  document.getElementById("sharpen_value").innerHTML =0;
-	document.getElementById("contrast_value").innerHTML =0;
-	document.getElementById("saturate_value").innerHTML =0;
-	document.getElementById("Sharpen").value=10;
-	document.getElementById("contrast").value=10;
-	document.getElementById("saturate").value=10;
-	send_slide('/bright',$(this).val())
+
+	document.getElementById("Sharpen").oninput = function () {
+		document.getElementById("sharpen_value").innerHTML = $(this).val() - 10;
+		document.getElementById("contrast_value").innerHTML = 0;
+		document.getElementById("bright_value").innerHTML = 0;
+		document.getElementById("saturate_value").innerHTML = 0;
+		document.getElementById("contrast").value = 10;
+		document.getElementById("bright").value = 10;
+		document.getElementById("saturate").value = 10;
+		send_slide('/sharpen', $(this).val())
 	}
-	
-	document.getElementById("saturate").oninput= function() {
-	  document.getElementById("saturate_value").innerHTML =$(this).val()-10;
-	  document.getElementById("sharpen_value").innerHTML =0;
-	document.getElementById("contrast_value").innerHTML =0;
-	document.getElementById("bright_value").innerHTML =0;
-	document.getElementById("Sharpen").value=10;
-	document.getElementById("contrast").value=10;
-	document.getElementById("bright").value=10;
-	send_slide('/saturation',$(this).val())
+
+	document.getElementById("bright").oninput = function () {
+		document.getElementById("bright_value").innerHTML = $(this).val() - 10;
+		document.getElementById("sharpen_value").innerHTML = 0;
+		document.getElementById("contrast_value").innerHTML = 0;
+		document.getElementById("saturate_value").innerHTML = 0;
+		document.getElementById("Sharpen").value = 10;
+		document.getElementById("contrast").value = 10;
+		document.getElementById("saturate").value = 10;
+		send_slide('/bright', $(this).val())
 	}
-		function send_slide(url, slide_value) {
-			var formData = new FormData();
-			formData.append('value', slide_value)
-			file = $('#input_file')[0].files[0];
-			formData.append('file', file)
-			$.ajax({
-				url: url,
-				type: 'POST',
-				data: formData,
-				processData: false,
-				contentType: false,
-				xhrFields: {
-					responseType: 'blob'
-				},
-				success: function (data) {
-					let img = document.getElementById('result');
-					const blobUrl = URL.createObjectURL(data);
-					img.src = blobUrl;
-					document.getElementById('result').style.display='flex';
-					enableBtn();
-					img.width = $('#input_image').width();
-					img.height = $('#input_image').height();
-				}
-			});
-		}
-	
-	</script>
+
+	document.getElementById("saturate").oninput = function () {
+		document.getElementById("saturate_value").innerHTML = $(this).val() - 10;
+		document.getElementById("sharpen_value").innerHTML = 0;
+		document.getElementById("contrast_value").innerHTML = 0;
+		document.getElementById("bright_value").innerHTML = 0;
+		document.getElementById("Sharpen").value = 10;
+		document.getElementById("contrast").value = 10;
+		document.getElementById("bright").value = 10;
+		send_slide('/saturation', $(this).val())
+	}
+	function send_slide(url, slide_value) {
+		var formData = new FormData();
+		formData.append('value', slide_value)
+		file = $('#input_file')[0].files[0];
+		formData.append('file', file)
+		$.ajax({
+			url: url,
+			type: 'POST',
+			data: formData,
+			processData: false,
+			contentType: false,
+			xhrFields: {
+				responseType: 'blob'
+			},
+			success: function (data) {
+				let img = document.getElementById('result');
+				const blobUrl = URL.createObjectURL(data);
+				img.src = blobUrl;
+				document.getElementById('result').style.display = 'flex';
+				enableBtn();
+				img.width = $('#input_image').width();
+				img.height = $('#input_image').height();
+			}
+		});
+	}
+
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
 <script src="/static/script.js"></script>
 
