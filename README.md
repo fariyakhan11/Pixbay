@@ -7,7 +7,7 @@ It help users apply different transformations to images , colorize ,blurs, greys
 Installation:
 Python 3.0 or above version
 
-libraries:
+<u>libraries:<u>
 pip install flask
 pip install Pillow
 pip install torchvision
