@@ -7,8 +7,8 @@ It help users apply different transformations to images , colorize ,blurs, greys
 Installation:
 Python 3.0 or above version
 
-<u>libraries:<u>
-'''
+#libraries:
+```
 pip install flask
 pip install Pillow
 pip install torchvision
@@ -17,4 +17,4 @@ pip install fastai
 pip install numpy
 pip install tensorflow
 pip install opencv-python
-'''
+```
