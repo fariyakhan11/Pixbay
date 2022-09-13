@@ -5,14 +5,14 @@ It help users apply different transformations to images , colorize ,blurs, greys
 <u>Prerequisite to Run Website<u>
 
 Installation:
-1) Python 3.0 or above version
+Python 3.0 or above version
 
 libraries:
-2) pip install flask
-3) pip install Pillow
-4) pip install torchvision
-5) pip install -U scikit-image
-6) pip install fastai
-7) pip install numpy
-8) pip install tensorflow
-8) pip install opencv-python
+pip install flask
+pip install Pillow
+pip install torchvision
+pip install -U scikit-image
+pip install fastai
+pip install numpy
+pip install tensorflow
+pip install opencv-python
