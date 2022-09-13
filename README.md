@@ -5,6 +5,7 @@ It help users apply different transformations to images , colorize ,blurs, greys
 <u>Prerequisite to Run Website<u>
 
 Installation:
+  
 Python 3.0 or above version
 
 <u>libraries:<u>
