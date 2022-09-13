@@ -8,6 +8,7 @@ Installation:
 Python 3.0 or above version
 
 <u>libraries:<u>
+'''
 pip install flask
 pip install Pillow
 pip install torchvision
@@ -16,3 +17,4 @@ pip install fastai
 pip install numpy
 pip install tensorflow
 pip install opencv-python
+'''
