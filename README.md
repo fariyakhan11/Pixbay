@@ -2,12 +2,12 @@
 Image-Tranformation website that lets you transform, translate and transfigurate images.
 It help users apply different transformations to images , colorize ,blurs, greyscale using python Flask, Pillow and Machine Learning model.
 
-<u>Prerequisite to Run Website<u>
+## Prerequisite to Run Website<u>
 
-Installation:
+# Installation
 Python 3.0 or above version
 
-#libraries:
+# libraries
 ```
 pip install flask
 pip install Pillow
