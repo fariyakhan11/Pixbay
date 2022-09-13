@@ -4,10 +4,10 @@ It help users apply different transformations to images , colorize ,blurs, greys
 
 ## Prerequisite to Run Website<u>
 
-# Installation
+###### Installation
 Python 3.0 or above version
 
-# libraries
+###### libraries
 ```
 pip install flask
 pip install Pillow
